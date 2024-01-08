@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy DApp</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            color: white;
+            background-image: url('bg.jpg'); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .connect-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #fff;
+            max-width: 400px;
+            margin-bottom: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .account-info-card {
+            display: none;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #fff;
+            max-width: 800px; /* Adjust as needed */
+            margin-bottom: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .account-card {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .sub-card {
+            flex: 1;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            margin: 0 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        p {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        strong {
+            font-weight: bold;
+            color: #333;
+        }
+        .buy-items-row {
+            display: flex;
+            justify-content: space-around; /* Adjust as needed */
+            margin-bottom: 20px;
+        }
+        .buy-item-card {
+            flex: 1;
+            margin: 0 10px;
+            max-width: 300px; /* Adjust card width as needed */
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+    
+        <h1>Welcome to Ether World</h1>
+    <div style="align-items:center;
+    justify-content:center;
+    margin:0 auto;
+    display:flex;
+    height:50vh;
+    ">
+ 
+            <header>
+                <div class="connect-card" id="connectCard">
+                    <h2>Connect to Wallet</h2>
+                    <img src="wallet.png" alt="Connect Image">
+                    <button id="openExtensionButton">Connect to Wallet</button>
+                </div>
+            </header>
+
+            <div class="account-info-card" id="accountInfoCard">
+                <h2>Account Information</h2>
+                <div class="account-card">
+                    <div class="sub-card">
+                        <h3>Account Address</h3>
+                        <p><strong>Account Address:</strong> <span id="userAddress1"></span></p>
+                    </div>
+                    <div class="sub-card">
+                        <h3>Account Balance</h3>
+                        <p><strong>Account Balance:</strong> <span id="accountBalance1"></span></p>
+                    </div>
+                </div>
+                <button id="logoutButton">Go Back</button>
+            </div>
+              </div>
+
+            <div class="buy-items-row">
+                <div class="buy-item-card">
+                    <h2 style="color:#fff">Token Is Available!!!!!!</h2>
+                    <div class="sub-card">
+                        <img src="nft3.jpg" alt="Item 1">
+                        <p>Hurry up and buy now : ) </p>
+                        <button id="buy1">Claim Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js" type="module"></script>
+</body>
+</html>
